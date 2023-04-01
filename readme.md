@@ -1,2 +1,2 @@
 # Weather APP
-[Website:](https://patrykwiecek95.github.io/weatherApp/)
+[Click here to see website](https://patrykwiecek95.github.io/weatherApp/)
