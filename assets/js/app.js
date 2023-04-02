@@ -17,8 +17,16 @@ weatherForm.addEventListener("submit", (event) => {
         // view += `W ${dataFromApi.location.name} jest dzisiaj ${dataFromApi.current.temp_c} stopni celciusza.`
 
         view += `<div class="weather__info">`
+        // county, city, time(region)
+        view += `<div class="weather__region"> 
+                </p>${dataFromApi.location.name}</p>
+                </p>${dataFromApi.location.country}</p>
+                <p> ${dataFromApi.location.localtime}</p>
+        </div>`
+
         //icon
-        view += `<div class="weather__icon"><img src= ${dataFromApi.current.condition.icon} alt = ${dataFromApi.current.condition.text}></div >`
+        view += `<div class="weather__icon"><img src= ${dataFromApi.current.condition.icon} 
+        alt = ${dataFromApi.current.condition.text}></div >`
         //temp
         view += `<div class="weather__temp"> ${dataFromApi.current.temp_c} <span>&degC</span></div >`
 

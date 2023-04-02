@@ -15,7 +15,13 @@
     &__form {
         // max-width: 500px;
         // width: 100%;
-        width: min(100% - 30px, 500px);
+        width: min(100% - 30px, 550px);
+       
+    
+        @include forBigPhone {
+            width: min(100% - 30px,250px);
+        }
+
     }
     &__city {
         width: 100%;
@@ -28,13 +34,28 @@
     }
     &__info {
        padding: 30px;
-       background-color: #0000002d;
-       color:#fff ;
-       border-radius: 10px;
+       background-color:$infobgColor ;
+       color:$infoColor;
+       border-radius: 20px;
        display: flex;
        align-items: center;
        gap: 15px;
+    
+        @include forBigPhone {
+            flex-direction: column;
+            text-align: center;
+        }
     }
+
+    &__region{
+        p {
+            margin: 0 0 5px 0;
+            &:last-of-type{
+                margin: 0;
+            }
+        }
+    }
+
     &__temp {
         font-size: 60px;
         display: flex;
@@ -43,7 +64,7 @@
             padding: 6px 0 0 0 ;
         }
      }
-     &__details {
+    &__details {
         p {
             margin: 0 0 5px 0;
             &:last-of-type{
